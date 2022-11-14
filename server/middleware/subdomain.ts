@@ -1,14 +1,14 @@
-export default defineEventHandler(({ req, res, context }) => {
-  const hostname = req.headers.host || "yourhost.com"
-
-  const mainDomain = ["localhost:3000", "yourhost.com"]
-
+import { mainDomain } from "@/constData/app";
+import { getCookie } from "h3";
+export default defineEventHandler((event) => {
+  let subdomain = getCookie(event, "subdomain") || null;
+  const hostname = event.req.headers.host || "yourhost.com"
+  
   if (!mainDomain.includes(hostname)) {
-    const currentHost =
-      process.env.NODE_ENV === "production"
-        ? hostname.replace(`.yourhost.com`, "")
-        : hostname.replace(`.localhost:3000`, "")
-
-    context.subdomain = currentHost
-  }
-})
+    const currentHost = hostname.match(/^[^.]*/g)[0];
+    event.context.subdomain = currentHost;
+    setCookie(event, "subdomain", currentHost);
+    if(event.req.headers.referer)
+      setCookie(event, "currentUrl", event.req.headers.referer);
+  } 
+}) 
