@@ -6,7 +6,7 @@ export default <RouterOptions>{
     let url = null;
     let page = "";
     if (currentUrl)
-      url = currentUrl.match(/(?<=\b(localhost:3000[/]|pyango.ch[/])\b).+/g);
+      url = currentUrl.match(/(?<=\b(localhost:3000[/]|yourdomain.com[/])\b).+/g);
     if (url) {
       page = url[0];
       if (currentUrl.charAt(currentUrl.length - 1) === "/")
