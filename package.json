@@ -14,5 +14,6 @@
     "mdi": "^2.2.43",
     "sass": "^1.55.0",
     "vuetify": "^3.0.0-beta.15"
-  }
+  },
+  "packageManager": "yarn@3.4.1"
 }
