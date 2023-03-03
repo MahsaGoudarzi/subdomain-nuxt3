@@ -1,8 +1,9 @@
 import { mainDomain } from "@/constData/app";
-import { getCookie } from "h3";
+import { getCookie, getHeaders } from "h3";
 export default defineEventHandler((event) => {
   let subdomain = getCookie(event, "subdomain") || null;
-  const hostname = event.req.headers.host || "yourhost.com"
+  const headers = getHeaders(event)
+  const hostname = headers.host || "yourhost.com"
   
   if (!mainDomain.includes(hostname)) {
     const currentHost = hostname.match(/^[^.]*/g)[0];
