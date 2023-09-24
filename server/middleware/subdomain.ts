@@ -1,7 +1,6 @@
 import { mainDomain } from "@/constData/app";
 import { getCookie, getHeaders } from "h3";
 export default defineEventHandler((event) => {
-  let subdomain = getCookie(event, "subdomain") || null;
   const headers = getHeaders(event)
   const hostname = headers.host || "yourhost.com"
   if (!mainDomain.includes(hostname)) {
