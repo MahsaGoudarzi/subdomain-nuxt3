@@ -7,6 +7,8 @@
     <br />
     <nuxt-link target="_blank" to="http://subdomain1.localhost:3000/about ">subdomain1 about</nuxt-link>
     <br />
+    <nuxt-link target="_blank" to="http://subdomain1.localhost:3000/blah/ ">subdomain1 blah</nuxt-link>
+    <br />
     <nuxt-link target="_blank" to="http://subdomain2.localhost:3000/ ">subdomain2</nuxt-link>
   </v-container>
 </template>
