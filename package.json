@@ -13,6 +13,5 @@
   "dependencies": {
     "mdi": "^2.2.43",
     "sass": "^1.55.0"
-  },
-  "packageManager": "yarn@3.5.0"
+  }
 }
