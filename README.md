@@ -2,7 +2,7 @@ In this repo I created nuxt 3 project with custom router.options for subdomain a
 for example you can rich to subdomain1.host.com -> redirect you to page -> pages->subdomain1->index.vue
 and also with entering url : subdomain1.host.com/about -> redirect you to page -> pages->subdomain1->about.vue
 
-Nuxt 3 - custom router options for subdomain and vuetify <3
+Nuxt 3 - custom router options for subdomain
 
 # Nuxt 3 Minimal Starter
 

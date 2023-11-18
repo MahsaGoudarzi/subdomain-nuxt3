@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <div>
     <h4 class="text-h4">subdomain 1 YUP 🤟🏾 </h4>
-  </v-container>
+  </div>
 </template>
